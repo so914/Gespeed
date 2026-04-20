@@ -1,0 +1,4 @@
+@import 'tailwindcss';
+.fond-hero{
+    background-image: url('./image.webp');
+}
