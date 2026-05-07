@@ -29,7 +29,7 @@ export default function Services() {
     <>
       {/* Mobile header */}
       <section>
-        <div className="md:hidden px-6 mb-12 -translate-y-36 my-32 pb-8">
+        <div className="md:hidden px-6 md:hidden pb-8">
           <h2 className="text-2xl font-bold mb-4 my-[2rem] text-center text-blue-800">
             Nos Services
           </h2>
@@ -41,8 +41,8 @@ export default function Services() {
       </section>
 
       {/* Desktop section */}
-      <section className="relative mt-64 md:mt-0">
-        <div className="px-6 md:px-12 pt-[8rem] pb-56 bg-blue-950 -translate-y-[200px] md:-translate-y-8" style={{
+      <section className="relative md:mt-64 md:h-90">
+        <div className="hidden md:block md:px-12 pt-[8rem] pb-56 bg-blue-950 md:-translate-y-64" style={{
     clipPath: "polygon(0 0, 100% 36%, 100% 99%, 0 66%)"
   }}>
           <h2 className="text-xl text-center md:text-3xl text-white font-bold mb-4 md:mt-[2rem] my-[2rem] hidden md:block">
@@ -55,7 +55,7 @@ export default function Services() {
         </div>
 
 
-        <div className="w-full flex items-center justify-center absolute bottom-0 gap-8 md:-translate-y-6">
+        <div className="w-full px-8 flex items-center justify-center gap-8 md:-translate-y-116">
           <div className="grid grid-cols-1 sm:grid-cols-4 gap-6 w-full max-w-6xl">
             {services.map((service, idx) => (
               <div
@@ -66,10 +66,10 @@ export default function Services() {
                   <p className="size-12 rounded-full text-white bg-gray-700 flex justify-center items-center mx-auto">
                     {service.icon}
                   </p>
-                  <h3 className="mt-3 font-bold mb-2 text-lg md:text-[17px]">
+                  <h3 className="mt-3 font-bold mb-2 text-md md:text-[17px]">
                     {service.title}
                   </h3>
-                  <p className="text-lg md:text-sm">{service.description}</p>
+                  <p className="text-md md:text-sm">{service.description}</p>
                 </div>
               </div>
             ))}

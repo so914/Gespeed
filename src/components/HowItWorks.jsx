@@ -35,20 +35,20 @@ export default function HowItWorks() {
           Déménager n'a jamais été aussi simple et transparent.
         </p>
 
-        <div className="flex flex-col md:flex-row justify-around gap-6 md:gap-0 px-0 md:px-6 text-lg">
+        <div className="flex flex-col md:flex-row justify-around gap-6 md:gap-0 px-4 md:px-6 text-lg">
           {steps.map((step) => (
             <div key={step.number}>
 
               <div className="w-full md:size-64 md:[clip-path:polygon(0_25%,100%_35%,100%_86%,0%_100%)]  h-16 bg-gray-200 relative flex md:gap-0 md:justify-center items-center rounded-lg md:divide-x-0 px-4 md:ps-0">
                 {/* mobile number badge */}
-                <div className="md:hidden size-10 bg-blue-900 rounded-full flex items-center justify-center text-white font-bold mr-3">
+                <div className="md:hidden size-8 bg-blue-900 rounded-full flex items-center justify-center text-white font-bold md:text-lg text-sm">
                   {step.number}
                 </div>
-                <div className="flex items-center justify-around w-full">
-                  <h3 className="font-bold text-center md:hidden">
+                <div className="flex items-center md:justify-around w-full">
+                  <h3 className="font-bold text-center md:hidden ms-2 md:ms-0 md:text-md text-sm">
                     {step.title}
                   </h3>
-                  <p className="md:text-5xl text-3xl text-blue-900 md:mt-12">
+                  <p className="hidden md:inline md:text-5xl text-2xl text-blue-900 md:mt-12">
                     {step.icon}
                   </p>
                 </div>
@@ -56,7 +56,7 @@ export default function HowItWorks() {
 
               {/* mobile etape description  */}
               <div className="w-full md:hidden mt-2">
-                <p className="text-justify text-[18px]">{step.description}</p>
+                <p className="text-justify text-[16px] text-gray-600 ">{step.description}</p>
               </div>
             </div>
           ))}

@@ -12,6 +12,17 @@ const cars = [
       { val: "Urbain", label: "Usage" },
     ],
   },
+   {
+    img: "./car2.webp",
+    badge: "Petit volume",
+    title: "Véhicule utilitaire léger",
+    desc: "Idéal pour les livraisons urbaines et les petits déménagements. Maniable et économique en carburant.",
+    specs: [
+      { val: "8 m³", label: "Volume" },
+      { val: "800 kg", label: "Charge" },
+      { val: "Urbain", label: "Usage" },
+    ],
+  },
   {
     img: "./car1.webp",
     badge: "Grand volume",
@@ -20,7 +31,7 @@ const cars = [
     specs: [
       { val: "30 m³", label: "Volume" },
       { val: "3,5 T", label: "Charge" },
-      { val: "Longue dist.", label: "Usage" },
+      { val: "Long. dist.", label: "Usage" },
     ],
   },
 ];
@@ -29,7 +40,7 @@ function CarCard({ car }) {
   return (
     <div className="relative overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-br from-blue-900 via-slate-900 to-blue-900  p-8 transition-transform duration-300 hover:-translate-y-1 hover:border-blue-400/50">
       {/* Glow rings */}
-      {[220, 300, 380].map((size, i) => (
+      {[220, 300, 360].map((size, i) => (
         <div
           key={i}
           style={{ width: size, height: size }}
@@ -38,7 +49,7 @@ function CarCard({ car }) {
       ))}
 
       {/* Spinning dashed ring */}
-      <div className="pointer-events-none absolute left-1/2 top-1/2 h-62 w-62 -translate-x-1/2 -translate-y-1/2 animate-spin rounded-full border-2 border-dashed border-blue-500 [animation-duration:18s]" />
+      <div className="pointer-events-none absolute left-1/2 top-1/2 h-60 w-60 -translate-x-1/2 -translate-y-1/2 animate-spin rounded-full border-2 border-dashed border-blue-500 [animation-duration:18s]" />
 
       {/* Bottom glow */}
       <div className="pointer-events-none absolute bottom-0 left-1/2 h-16 w-52 -translate-x-1/2 rounded-full bg-blue-400/20 blur-xl" />
@@ -57,16 +68,16 @@ function CarCard({ car }) {
         <img
           src={car.img}
           alt={car.title}
-          className="w-full max-w-[280px] drop-shadow-[0_8px_24px_rgba(0,0,0,0.5)]"
+          className="w-full max-w-[260px] drop-shadow-[0_8px_24px_rgba(0,0,0,0.5)]"
         />
       </div>
 
       {/* Info */}
-      <h3 className="mb-2 text-[17px] font-semibold text-white">{car.title}</h3>
-      <p className="text-[13px] leading-relaxed text-gray-200">{car.desc}</p>
+      <h3 className="mb-6 text-[17px] font-semibold text-white translate-y-12">{car.title}</h3>
+      <p className="text-[14px] leading-relaxed text-gray-200 translate-y-8">{car.desc}</p>
 
       {/* Specs */}
-      <div className="mt-4 flex gap-3">
+      <div className="mt-10 flex gap-3">
         {car.specs.map((s) => (
           <div
             key={s.label}
@@ -104,7 +115,7 @@ function CarSection() {
       </div>
 
       {/* cartes */}
-      <div className="relative z-10 grid grid-cols-2 gap-8">
+      <div className="relative z-10 grid grid-cols-1 md:grid-cols-3 gap-8">
         {cars.map((car) => (
           <CarCard key={car.title} car={car} />
         ))}

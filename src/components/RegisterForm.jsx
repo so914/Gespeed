@@ -109,13 +109,7 @@ export default function RegisterForm() {
 
   return (
     <div className="flex min-h-screen items-center justify-center bg-slate-100 p-6 mt-6">
-      {/* Mobile step indicator */}
-      <div className="mb-4 flex justify-between md:hidden w-full max-w-sm">
-        <button className="text-blue-900">← Retour</button>
-        <div className="rounded-lg bg-gray-200 px-3 py-1 text-sm font-bold text-slate-600">
-          Étape {step}/2
-        </div>
-      </div>
+
 
       <div className="grid w-full max-w-5xl overflow-hidden rounded-2xl border border-gray-200 shadow-xl md:grid-cols-2">
         <LeftPanel />
