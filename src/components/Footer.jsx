@@ -22,7 +22,7 @@ export default function Footer() {
           alt="Logo"
           className="w-[130px]"
         />
-        <p className="mt-2 text-lg">
+        <p className="mt-2 text-md">
           GeSpeed Delivery entreprise.
           <br />
           Créé en 2024.

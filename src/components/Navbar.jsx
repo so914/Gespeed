@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 import { FaGlobe, FaBars, FaXmark } from "react-icons/fa6";
 
 export default function Navbar() {
@@ -31,34 +31,65 @@ export default function Navbar() {
         {/* Desktop nav */}
         <nav className="hidden lg:flex flex-1 justify-center">
           <ul className="flex items-center gap-1 text-[16px] text-gray-600">
-
             <li>
-              <Link
+              <NavLink
                 to="/"
-                className="px-4 py-2 hover:text-blue-700 hover:underline underline-offset-4 decoration-blue-700 decoration-2"
+                end
+                className={({ isActive }) =>
+                  `px-4 py-2 hover:text-blue-700 underline-offset-4 decoration-blue-700 decoration-2 ${
+                    isActive
+                      ? "text-blue-700 underline"
+                      : ""
+                  }`
+                }
               >
                 Accueil
-              </Link>
+              </NavLink>
             </li>
 
             <li>
-              <Link
-                to="/devis" className="px-4 py-2 hover:text-blue-700 cursor-pointer">
+              <NavLink
+                to="/devis"
+                className={({ isActive }) =>
+                  `px-4 py-2 hover:text-blue-700 cursor-pointer underline-offset-4 decoration-blue-700 decoration-2 ${
+                    isActive
+                      ? "text-blue-700 underline"
+                      : ""
+                  }`
+                }
+              >
                 Demande de devis
-              </Link>
-
+              </NavLink>
             </li>
 
             <li>
-              <Link to='/help' className="px-4 py-2 hover:text-blue-700 cursor-pointer">
+              <NavLink
+                to="/help"
+                className={({ isActive }) =>
+                  `px-4 py-2 hover:text-blue-700 cursor-pointer underline-offset-4 decoration-blue-700 decoration-2 ${
+                    isActive
+                      ? "text-blue-700 underline"
+                      : ""
+                  }`
+                }
+              >
                 Aide
-              </Link>
+              </NavLink>
             </li>
 
             <li>
-              <Link  to='/contact' className="px-4 py-2 hover:text-blue-700 cursor-pointer">
+              <NavLink
+                to="/contact"
+                className={({ isActive }) =>
+                  `px-4 py-2 hover:text-blue-700 cursor-pointer underline-offset-4 decoration-blue-700 decoration-2 ${
+                    isActive
+                      ? "text-blue-700 underline"
+                      : ""
+                  }`
+                }
+              >
                 Contacts
-              </Link>
+              </NavLink>
             </li>
           </ul>
         </nav>
@@ -89,7 +120,6 @@ export default function Navbar() {
           }`}
         >
           <ul className="flex flex-col text-sm text-gray-700">
-
             <li className="py-3 border-b">
               <Link to="/">Accueil</Link>
             </li>

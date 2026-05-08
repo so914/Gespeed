@@ -335,20 +335,20 @@ export default function DevisRegister() {
   };
 
   return (
-    <section className="shadow-xl rounded-lg md:min-w-5xl h-[580px] md:mb-16 md:mt-18 overflow-hidden">
-      <div className="grid grid-cols-2 h-full">
+    <section className="shadow-xl rounded-lg md:min-w-5xl md:mx-12 w-full mx-2 h-[480px] md:h-[580px] md:mb-16 mt-18 overflow-hidden">
+      <div className="grid md:grid-cols-2 h-full">
         <form
           onSubmit={handleSubmit}
           className="h-full overflow-y-auto flex flex-col"
         >
           {!isClicked && (
-            <div className="px-7  flex flex-col h-full">
+            <div className="md:px-7 px-4 flex flex-col h-full">
               <div>
-                <h3 className="mb-3 my-4 font-bold text-gray-600">
+                <h3 className="md:mb-3 mt-12 mb-0 md:mt-4 font-bold text-gray-600 text-sm md:text-md">
                   Vos coordonnées
                 </h3>
 
-                <label htmlFor="name" className="text-gray-400">
+                <label htmlFor="name" className="text-gray-400 text-sm md:text-md">
                   Nom complet
                 </label>
                 <br />
@@ -358,10 +358,10 @@ export default function DevisRegister() {
                   type="text"
                   value={form.name}
                   onChange={handleChange}
-                  className="my-1 rounded-lg border border-[lightgray] p-2 w-full"
+                  className="my-1 rounded-md md:rounded-lg border border-[lightgray] pt-1 md:p-2 w-full"
                 />
 
-                <label htmlFor="email" className="text-gray-400">
+                <label htmlFor="email" className="text-gray-400 text-sm md:text-md">
                   Email
                 </label>
                 <br />
@@ -371,10 +371,10 @@ export default function DevisRegister() {
                   type="email"
                   value={form.email}
                   onChange={handleChange}
-                  className="my-1 rounded-lg border border-[lightgray] p-2 w-full"
+                  className="my-1 rounded-md md:rounded-lg border border-[lightgray] pt-1 md:p-2 w-full"
                 />
 
-                <label htmlFor="phone" className="text-gray-400">
+                <label htmlFor="phone" className="text-gray-400 text-sm md:text-md">
                   Phone
                 </label>
                 <br />
@@ -384,11 +384,11 @@ export default function DevisRegister() {
                   type="text"
                   value={form.phone}
                   onChange={handleChange}
-                  className="my-1 rounded-lg border border-[lightgray] p-2 w-full"
+                  className="my-1 rounded-md md:rounded-lg border border-[lightgray] pt-1 md:p-2 w-full"
                 />
 
-                <div className="mt-6">
-                  <h3 className="font-bold mb-4 text-gray-600">
+                <div className="md:mt-6 mt-3">
+                  <h3 className="font-bold md:mb-4 mb-2 text-gray-600 text-sm md:text-md">
                     Date souhaitée pour le service
                   </h3>
 
@@ -397,12 +397,12 @@ export default function DevisRegister() {
                     name="date"
                     value={form.date}
                     onChange={handleChange}
-                    className="rounded-lg border border-[lightgray] p-2 w-full"
+                    className="rounded-md md:rounded-lg border border-[lightgray] text-sm md:text-md p-1 md:p-2 w-full text-gray-400"
                   />
                 </div>
 
-                <div className="mt-6">
-                  <h3 className="font-bold mb-4 text-gray-600">
+                <div className="md:mt-6 mt-3">
+                  <h3 className="font-bold md:mb-4 mb-2 text-gray-600 text-sm md:text-md">
                     Type de service
                   </h3>
 
@@ -410,7 +410,7 @@ export default function DevisRegister() {
                     name="services"
                     value={service}
                     onChange={handleServiceChange}
-                    className="border rounded-lg border-[lightgray] p-2 w-full text-gray-600"
+                    className="border rounded-md md:rounded-lg border-[lightgray] text-sm md:text-md py-1 px-2 md:p-2 w-full text-gray-400"
                   >
                     <option value="">Choisir un service</option>
 
@@ -445,13 +445,13 @@ export default function DevisRegister() {
                   <IoIosArrowRoundBack size={26}/> Retour
                 </h2>
 
-                <h3 className="font-bold mb-4 text-gray-600">
+                <h3 className="font-bold text-sm md:text-md md:mb-4 mb-2 text-gray-600">
                   Détails service {service}
                 </h3>
 
                 {currentQuestions.map((c) => (
                   <div key={c.name} className="mb-3">
-                    <label htmlFor={c.name} className="text-gray-600">
+                    <label htmlFor={c.name} className="text-gray-400 text-sm md:text-md">
                       {c.label}
                     </label>
                     <br />
@@ -462,7 +462,7 @@ export default function DevisRegister() {
                         id={c.name}
                         value={form[c.name] || ""}
                         onChange={handleChange}
-                        className="border my-1 rounded-lg border-[lightgray] p-2 w-full text-gray-600"
+                        className="border my-1 rounded-md md:rounded-lg border-[lightgray] text-sm md:text-md py-1 px-2 md:p-2 w-full text-gray-400"
                       >
                         <option value="">Choisir</option>
 
@@ -479,7 +479,7 @@ export default function DevisRegister() {
                         id={c.name}
                         value={form[c.name] || ""}
                         onChange={handleChange}
-                        className="border my-1 rounded-lg border-[lightgray] p-2 w-full"
+                        className="border my-1 rounded-md md:rounded-lg border-[lightgray] text-sm md:text-md p-1 md:p-2 w-full"
                       />
                     )}
                   </div>
