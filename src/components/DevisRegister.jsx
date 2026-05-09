@@ -335,8 +335,8 @@ export default function DevisRegister() {
   };
 
   return (
-    <section className="shadow-xl rounded-lg md:min-w-5xl md:mx-12 w-full mx-2 h-[480px] md:h-[580px] md:mb-16 mt-18 overflow-hidden">
-      <div className="grid md:grid-cols-2 h-full">
+    <section className="shadow-xl rounded-lg md:min-w-5xl md:mx-24 w-full mx-2 h-[480px] md:h-[580px] md:mb-16 mt-18 overflow-hidden">
+      <div className="grid md:grid-cols-2 h-full gap-4">
         <form
           onSubmit={handleSubmit}
           className="h-full overflow-y-auto flex flex-col"
@@ -358,7 +358,7 @@ export default function DevisRegister() {
                   type="text"
                   value={form.name}
                   onChange={handleChange}
-                  className="my-1 rounded-md md:rounded-lg border border-[lightgray] pt-1 md:p-2 w-full"
+                  className="my-1 rounded-md md:rounded-lg border border-[lightgray] pt-1 md:pt-2 w-full"
                 />
 
                 <label htmlFor="email" className="text-gray-400 text-sm md:text-md">
@@ -371,7 +371,7 @@ export default function DevisRegister() {
                   type="email"
                   value={form.email}
                   onChange={handleChange}
-                  className="my-1 rounded-md md:rounded-lg border border-[lightgray] pt-1 md:p-2 w-full"
+                  className="my-1 rounded-md md:rounded-lg border border-[lightgray] pt-1 md:pt-2 w-full"
                 />
 
                 <label htmlFor="phone" className="text-gray-400 text-sm md:text-md">
@@ -384,7 +384,7 @@ export default function DevisRegister() {
                   type="text"
                   value={form.phone}
                   onChange={handleChange}
-                  className="my-1 rounded-md md:rounded-lg border border-[lightgray] pt-1 md:p-2 w-full"
+                  className="my-1 rounded-md md:rounded-lg border border-[lightgray] pt-1 md:pt-2 w-full"
                 />
 
                 <div className="md:mt-6 mt-3">
@@ -436,7 +436,7 @@ export default function DevisRegister() {
           )}
 
           {isClicked && (
-            <div className="ps-7 pe-7 py-6 flex flex-col h-full">
+            <div className="ps-7 pe-7 py-6 flex flex-col h-full ">
               <div>
                 <h2
                   onClick={handleBack}
