@@ -130,15 +130,14 @@ export default function Hero() {
 
      
           <img
-            src="hero.png"
+            src="hero.webp"
             alt="livreur GeSpeed"
             style={{
               zIndex: 3,
               objectFit: "contain",
-              filter: "drop-shadow(0 28px 44px rgba(0,0,0,0.40))",
               transition: "transform 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275)",
             }}
-            className="hover:scale-[1.04]  translate-y-10 h-full cursor-pointer min-w-3xl"
+            className="hover:scale-[1.04]  translate-y-10 h-full cursor-pointer min-w-2xl"
           />
         </div>
       </div>
@@ -179,9 +178,9 @@ export default function Hero() {
 
           <div className="relative z-10 flex items-end justify-center" style={{ minHeight: "300px" }}>
             <img
-              src="hero.png"
+              src="hero.webp"
               alt="livreur GeSpeed"
-              className="min-w-lg"
+              className=""
               style={{
                 minHeight: "300px",
                 objectFit: "contain",
