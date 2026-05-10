@@ -21,9 +21,9 @@ export default function Hero() {
         />
 
         {/* ── Col gauche : Texte ── */}
-        <div className="relative z-10 flex items-center px-12 pt-16">
-          <div className="pointer-events-none absolute -top-20 -left-20 w-72 h-72 rounded-full border border-blue-400/10" />
-          <div className="pointer-events-none absolute bottom-0 left-10 w-48 h-48 rounded-full border border-blue-400/[0.06]" />
+        <div className="relative z-10 flex items-center px-12  pt-16">
+          <div className="pointer-events-none absolute -top-20 -left-20 w-72 h-72 rounded-full border-2 border-blue-400/10" />
+          <div className="pointer-events-none absolute bottom-0 left-10 w-48 h-48 rounded-full border-2 border-blue-400/[0.06]" />
 
           <div className="w-full">
 
@@ -77,8 +77,8 @@ export default function Hero() {
         {/* ── Col droite : Blob + Image ── */}
         <div className="relative z-10 flex items-center justify-center overflow-hidden">
           {/* Anneaux */}
-          <div className="pointer-events-none absolute -top-10 -right-10 w-56 h-56 rounded-full border border-blue-400/10" />
-          <div className="pointer-events-none absolute -bottom-16 -right-16 w-80 h-80 rounded-full border border-blue-400/[0.06]" />
+          <div className="pointer-events-none absolute -top-10 -right-10 w-56 h-56 rounded-full border-2 border-blue-400/20" />
+          <div className="pointer-events-none absolute -bottom-16 -right-16 w-80 h-80 rounded-full border-2 border-blue-400/[0.9]" />
 
           {/* Blob lumière douce */}
           <div
@@ -87,9 +87,8 @@ export default function Hero() {
               width: "360px",
               height: "400px",
               background:
-                "radial-gradient(ellipse at 45% 55%, rgba(59,130,246,0.22) 0%, rgba(99,102,241,0.12) 45%, transparent 72%)",
-              borderRadius: "62% 38% 46% 54% / 60% 44% 56% 40%",
-              filter: "blur(3px)",
+                "radial-gradient(ellipse at 45% 55%, rgba(60, 129, 240, 0.22) 0%, rgba(99,102,241,0.12) 45%, transparent 72%)",
+              borderRadius: "62% 38% 46% 54% /60",
               transform: "rotate(-8deg)",
             }}
           />
@@ -111,7 +110,7 @@ export default function Hero() {
           <svg
             className="absolute"
             viewBox="0 0 400 440"
-            style={{ width: "380px", height: "420px", opacity: 0.13 }}
+            style={{ width: "380px", height: "420px", opacity: 0.18 }}
             xmlns="http://www.w3.org/2000/svg"
           >
             <path
@@ -160,8 +159,8 @@ export default function Hero() {
               backgroundSize: "24px 24px",
             }}
           />
-          <div className="pointer-events-none absolute -top-10 -right-10 w-48 h-48 rounded-full border border-blue-400/10" />
-          <div className="pointer-events-none absolute -bottom-8 -left-8 w-40 h-40 rounded-full border border-blue-400/10" />
+          <div className="pointer-events-none absolute -top-10 -right-10 w-48 h-48 rounded-full border border-white/20" />
+          <div className="pointer-events-none absolute -bottom-8 -left-8 w-40 h-40 rounded-full border-2 border-white/10" />
 
           {/* Blob mobile */}
           <div
