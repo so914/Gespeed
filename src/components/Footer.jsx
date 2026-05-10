@@ -20,7 +20,7 @@ export default function Footer() {
         <img
           src="./logo.png"
           alt="Logo"
-          className="w-[130px]"
+          className="md:w-[120px] w-[100px]"
         />
         <p className="mt-2 text-md">
           GeSpeed Delivery entreprise.
@@ -37,7 +37,7 @@ export default function Footer() {
         {footerServices.map((s) => (
           <a
             key={s}
-            className="hover:underline decoration-blue-700 decoration-2 hover:text-blue-700 cursor-pointer text-lg md:text-[15px]"
+            className="hover:underline decoration-blue-700 decoration-2 hover:text-blue-700 cursor-pointer text-sm md:text-[15px]"
           >
             {s}
           </a>
@@ -52,7 +52,7 @@ export default function Footer() {
         {footerCompany.map((s) => (
           <a
             key={s}
-            className="hover:underline decoration-blue-700 decoration-2 hover:text-blue-700 cursor-pointer text-lg md:text-[15px]"
+            className="hover:underline decoration-blue-700 decoration-2 hover:text-blue-700 cursor-pointer text-sm md:text-[15px]"
           >
             {s}
           </a>
@@ -67,7 +67,7 @@ export default function Footer() {
         {footerLegal.map((s) => (
           <a
             key={s}
-            className="hover:underline decoration-blue-700 decoration-2 hover:text-blue-700 cursor-pointer text-lg md:text-[15px]"
+            className="hover:underline decoration-blue-700 decoration-2 hover:text-blue-700 cursor-pointer text-sm md:text-[15px]"
           >
             {s}
           </a>
@@ -76,7 +76,7 @@ export default function Footer() {
 
       {/* Mobile social */}
       <nav className="flex flex-col gap-2 md:hidden">
-        <h6 className="font-bold text-lg uppercase tracking-wide mb-1">
+        <h6 className="font-bold text-sm md:text-[18px] uppercase tracking-wide mb-1">
           Contacts
         </h6>
         <div className="flex gap-2">

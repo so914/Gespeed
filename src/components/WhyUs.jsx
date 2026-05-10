@@ -38,12 +38,12 @@ const features = [
 export default function WhyUs() {
 
   return (
-    <section className="mt-32 mb-12 md:mt-0">
+    <section className="mb-12 md:mt-0">
       <div className="px-6 md:px-12 py-8">
-        <h2 className="text-2xl font-bold mb-3 text-center mt-5">
+        <h2 className="md:text-2xl text-xl font-bold mb-3 text-center mt-5">
           Pourquoi choisir GeSpeed ?
         </h2>
-        <p className="text-gray-500 mb-12 text-center text-lg">
+        <p className="text-gray-500 mb-12 text-center text-md md:text-lg">
           L'excellence opérationnelle à chaque kilomètre.
         </p>
 
@@ -56,10 +56,10 @@ export default function WhyUs() {
                 <div key={idx}>
                   <div className="flex items-center gap-4 mb-3">
                     <div className="bg-gray-100 p-3 rounded-lg">
-                      <Icon className="text-blue-900 text-2xl" />
+                      <Icon className="text-blue-900 text-xl md:text-2xl" />
                     </div>
 
-                    <h3 className="text-xl font-bold">
+                    <h3 className="text-md md:text-xl font-bold">
                       {feature.title}
                       {feature.titleExtra && (
                         <span className="ml-2 text-xl font-bold hidden md:inline">
@@ -69,11 +69,11 @@ export default function WhyUs() {
                     </h3>
                   </div>
 
-                  <p className="text-gray-700 font-light mb-3">
+                  <p className="text-gray-700 font-light mb-3 md:text-lg text-sm leading-relaxed">
                     {feature.description}
                   </p>
 
-                  <p className="text-blue-700 font-semibold cursor-pointer">
+                  <p className="text-blue-700 font-semibold cursor-pointer md:text-md text-sm">
                     En savoir plus <i className="fa-solid fa-chevron-right"></i>
                   </p>
                 </div>
@@ -83,7 +83,7 @@ export default function WhyUs() {
 
           <div className="w-full md:w-[40%]">
             <div className="bg-blue-900 rounded-lg py-6 px-6 text-white h-full">
-              <h2 className="font-light mb-6 text-lg lg:text-xl">
+              <h2 className="font-light mb-6 text-md lg:text-xl">
                 Plus de 2000 personnes au Congo Brazzaville nous font confiance,
                 nos statistiques le prouvent.
               </h2>

@@ -28,10 +28,10 @@ export default function HowItWorks() {
   return (
     <section>
       <div className="px-6 md:px-12 pt-8 mb-14 pb-12">
-        <h2 className="text-2xl font-bold lg:mt-6 text-center">
+        <h2 className="text-xl md:text-2xl font-bold lg:mt-6 text-center">
           Comment ça marche
         </h2>
-        <p className="text-gray-500 mb-12 text-center mt-3 text-lg">
+        <p className="text-gray-600 text-sm mb-12 text-center mt-3 md:text-lg">
           Déménager n'a jamais été aussi simple et transparent.
         </p>
 
@@ -39,13 +39,13 @@ export default function HowItWorks() {
           {steps.map((step) => (
             <div key={step.number}>
 
-              <div className="w-full md:size-64 md:[clip-path:polygon(0_25%,100%_35%,100%_86%,0%_100%)]  h-16 bg-gray-200 relative flex md:gap-0 md:justify-center items-center rounded-lg md:divide-x-0 px-4 md:ps-0">
+              <div className="w-full md:size-64 md:[clip-path:polygon(0_25%,100%_35%,100%_86%,0%_100%)]  h-12 bg-gray-200 relative flex md:gap-0 md:justify-center items-center rounded-md md:divide-x-0 px-4 md:ps-0">
                 {/* mobile number badge */}
                 <div className="md:hidden size-8 bg-blue-900 rounded-full flex items-center justify-center text-white font-bold md:text-lg text-sm">
                   {step.number}
                 </div>
                 <div className="flex items-center md:justify-around w-full">
-                  <h3 className="font-bold text-center md:hidden ms-2 md:ms-0 md:text-md text-sm">
+                  <h3 className="font-bold text-center md:hidden ms-2 text-gray-950/70 text-sm">
                     {step.title}
                   </h3>
                   <p className="hidden md:inline md:text-5xl text-2xl text-blue-900 md:mt-12">

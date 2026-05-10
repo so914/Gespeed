@@ -127,7 +127,7 @@ export default function RegisterForm() {
           </nav>
 
           <h1 className="text-xl font-bold text-slate-800">Bienvenue parmi nous</h1>
-          <p className="mb-5 mt-1 text-xs text-slate-400">Créez votre compte en 2 étapes rapides</p>
+          <p className="mb-5 mt-1 text-xs text-slate-400 md:text-sm">Créez votre compte en 2 étapes rapides</p>
 
           <StepIndicator step={step} />
 

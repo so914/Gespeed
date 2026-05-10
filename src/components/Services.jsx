@@ -30,10 +30,10 @@ export default function Services() {
       {/* Mobile header */}
       <section>
         <div className="md:hidden px-6 md:hidden pb-8">
-          <h2 className="text-2xl font-bold mb-4 my-[2rem] text-center text-blue-800">
+          <h2 className="text-xl font-bold mb-4 my-[2rem] text-center text-black">
             Nos Services
           </h2>
-          <p className="text-gray-900 text-lg text-justify">
+          <p className="text-[15px] text-gray-700 mx-auto  mt-4 text-center">
             Des solutions simples, rapides et fiables pour tous vos besoins de
             transport et déménagement.
           </p>
@@ -56,7 +56,7 @@ export default function Services() {
 
 
         <div className="w-full px-8 flex items-center justify-center gap-8 md:-translate-y-116">
-          <div className="grid grid-cols-1 sm:grid-cols-4 gap-6 w-full max-w-6xl">
+          <div className="grid grid-cols-1 mx-6 gap-y-8 md:gap-y-0 md:grid-cols-4 gap-6 w-full md:max-w-6xl">
             {services.map((service, idx) => (
               <div
                 key={idx}
@@ -66,10 +66,10 @@ export default function Services() {
                   <p className="size-12 rounded-full text-white bg-blue-900 md:bg-gray-700 flex justify-center items-center mx-auto">
                     {service.icon}
                   </p>
-                  <h3 className="mt-3 font-bold mb-2 text-md md:text-[17px]">
+                  <h3 className="mt-3 font-bold mb-2 text-gray-700 md:text-black text-md md:text-[17px]">
                     {service.title}
                   </h3>
-                  <p className="text-md md:text-sm">{service.description}</p>
+                  <p className="text-sm text-gray-500 md:text-black">{service.description}</p>
                 </div>
               </div>
             ))}

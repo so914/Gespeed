@@ -94,7 +94,7 @@ function CarCard({ car }) {
 
 function CarSection() {
   return (
-    <section className="relative min-h-screen overflow-hidden px-6 md:px-10 py-16">
+    <section className="relative min-h-screen overflow-hidden px-6 md:px-10 py-16 md:py-8">
       {/* Dot grid */}
       <div
         className="pointer-events-none absolute inset-0"
@@ -105,11 +105,11 @@ function CarSection() {
       />
 
       <div className="relative z-10 mb-14 text-center">
-        <h2 className="text-2xl md:text-3xl font-semibold">
+        <h2 className="text-xl md:text-3xl font-semibold">
           Des véhicules adaptés à chaque besoin
         </h2>
         <div className="mx-auto mt-4 h-0.5 w-12 rounded-full bg-blue-400" />
-        <p className="mx-auto mt-4 max-w-md text-[15px] text-gray-700">
+        <p className="mx-auto mt-4 max-w-md text-[15px] md:text-[16px] text-gray-600">
           Choisissez la solution idéale selon le volume, la distance et le type de transport.
         </p>
       </div>

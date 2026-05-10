@@ -103,17 +103,17 @@ function RightPanel({ service }) {
         <span className="inline-block mb-3 rounded-full border border-blue-400/30 bg-blue-400/10 px-3 py-1 text-xs font-semibold text-blue-300 tracking-widest uppercase">
           Gespeed Logistics
         </span>
-        <h2 className="text-2xl font-bold leading-snug text-white">
+        <h2 className="text-2xl font-bold leading-snug text-white flex">
           Demande de
           <br />
-          <span className="underline decoration-blue-400 underline-offset-4">devis gratuit</span>
+          <span className="ps-2 underline decoration-blue-600 underline-offset-8">devis gratuit</span>
         </h2>
         <p className="mt-3 text-sm text-white/50 leading-relaxed">
           Obtenez une estimation personnalisée pour votre service en quelques instants.
         </p>
       </div>
 
-      <div className="relative z-10 space-y-3 mt-4">
+      <div className="relative z-10 space-y-3">
         {badges.map((b) => (
           <div key={b} className="flex items-center gap-3 rounded-xl border border-white/10 bg-white/[0.06] px-4 py-3">
             <div className="flex h-7 w-7 shrink-0 items-center justify-center rounded-lg bg-blue-400/20 border border-blue-400/20">
@@ -126,7 +126,7 @@ function RightPanel({ service }) {
         ))}
       </div>
 
-        <div className="mt-4">
+        <div>
           <p className="font-bold text-white"> Abréviations</p>
           <ul className="px-2 text-white/50 leading-relaxed text-sm">
             <li>RDC: Rez-de-chaussée</li>
@@ -136,7 +136,7 @@ function RightPanel({ service }) {
         </div>
 
       {service && (
-        <div className="relative z-10 mt-6 rounded-xl border border-white/10 bg-white/[0.06] px-4 py-3">
+        <div className="relative z-10 rounded-xl border border-white/10 bg-white/[0.06] px-4 py-3">
           <p className="text-[11px] uppercase tracking-widest text-white/40 mb-1">Service sélectionné</p>
           <p className="text-sm font-semibold text-white">{service}</p>
         </div>
@@ -210,7 +210,7 @@ export default function DevisRegister() {
             {!isClicked && (
               <div>
                 <h1 className="text-xl font-bold text-slate-800">Vos informations</h1>
-                <p className="mb-5 mt-1 text-xs text-slate-400">Remplissez vos coordonnées pour commencer</p>
+                <p className="mb-5 mt-1 text-xs md:text-sm text-slate-400">Remplissez vos coordonnées pour commencer</p>
 
                 <div className="space-y-4">
                   <div>
@@ -238,9 +238,9 @@ export default function DevisRegister() {
                   {/* Divider */}
                   <div className="pt-1 pb-1">
                     <div className="flex items-center gap-3">
-                      <div className="flex-1 h-px bg-gray-100" />
-                      <span className="text-[11px] uppercase tracking-widest text-slate-400">Service & date</span>
-                      <div className="flex-1 h-px bg-gray-100" />
+                      <div className="flex-1 h-px bg-gray-300" />
+                      <span className="text-[11px] md:text-sm uppercase tracking-widest text-slate-900 font-bold">Service & date</span>
+                      <div className="flex-1 h-px bg-gray-300" />
                     </div>
                   </div>
 

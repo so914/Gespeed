@@ -2,7 +2,7 @@ import { Link } from "react-router-dom";
 
 export default function Hero() {
   return (
-    <section className="mb-12">
+    <section className="mb-6 md:mb-12">
 
       {/* ── DESKTOP ── */}
       <div
@@ -29,11 +29,11 @@ export default function Hero() {
 
             <h1 className="text-3xl xl:text-4xl font-bold mb-5 text-white leading-tight">
               Déménagez en{" "}
-              <span className="text-blue-400">toute sécurité</span>{" "}
+              <span className="text-blue-600">toute sécurité</span>{" "}
               <span className="relative inline-block">
                 au Congo
                 <span
-                  className="absolute left-0 h-[3px] w-full rounded-full bg-blue-400"
+                  className="absolute left-0 h-[3px] w-full rounded-full bg-blue-600"
                   style={{ bottom: "-6px" }}
                 />
               </span>
@@ -48,13 +48,10 @@ export default function Hero() {
             <div className="flex items-center gap-4 flex-wrap">
               <Link
                 to="/devis"
-                className="inline-flex items-center gap-2 bg-blue-600 hover:bg-blue-400 rounded-xl py-3 px-7 text-white font-semibold text-sm transition active:scale-[0.98] shadow-lg shadow-blue-500/30"
+                className="inline-flex items-center gap-2 bg-blue-600 hover:bg-blue-800 rounded-xl py-3 px-7 text-white font-semibold text-sm transition active:scale-[0.98] shadow-lg shadow-blue-500/30"
               >
                 Demandez un devis
                 <span className="font-semibold">gratuitement</span>
-                <svg viewBox="0 0 24 24" className="w-4 h-4 stroke-white fill-none stroke-2 shrink-0">
-                  <path d="M5 12h14M12 5l7 7-7 7" />
-                </svg>
               </Link>
             </div>
 
@@ -141,7 +138,7 @@ export default function Hero() {
               filter: "drop-shadow(0 28px 44px rgba(0,0,0,0.40))",
               transition: "transform 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275)",
             }}
-            className="hover:scale-[1.04] translate-y-16 h-full cursor-pointer"
+            className="hover:scale-[1.04]  translate-y-10 h-full cursor-pointer min-w-3xl"
           />
         </div>
       </div>
@@ -151,9 +148,9 @@ export default function Hero() {
       <div className="md:hidden flex flex-col">
 
         <div
-          className="relative w-full overflow-hidden"
+          className="relative w-auto overflow-hidden rounded-xl mt-6 mx-3"
           style={{
-            minHeight: "300px",
+            maxHeight: "250px",
             background: "linear-gradient(135deg, #0f172a 0%, #1e3a5f 50%, #0f172a 100%)",
           }}
         >
@@ -184,9 +181,9 @@ export default function Hero() {
             <img
               src="hero.png"
               alt="livreur GeSpeed"
+              className="min-w-lg"
               style={{
-                maxHeight: "270px",
-                width: "auto",
+                minHeight: "300px",
                 objectFit: "contain",
                 filter: "drop-shadow(0 20px 30px rgba(0,0,0,0.30))",
                 transition: "all 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275)",
@@ -235,7 +232,7 @@ export default function Hero() {
                     <polyline points="20 6 9 17 4 12" />
                   </svg>
                 </div>
-                <span className="text-[11px] font-medium text-gray-500">{label}</span>
+                <span className="text-[12px] font-medium text-gray-500">{label}</span>
               </div>
             ))}
           </div>

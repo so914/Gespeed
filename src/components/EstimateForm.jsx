@@ -15,7 +15,7 @@ export default function EstimateForm() {
     <section className="mt-16">
       <div className="py-16 px-6 flex flex-col items-center bg-gray-100">
 
-        <h2 className="text-xl md:text-3xl font-semibold my-4 text-center">
+        <h2 className="text-xl md:text-2xl font-semibold my-4 text-center">
           Prêt pour votre prochain départ ?
         </h2>
 

@@ -1,4 +1,5 @@
 import { useState, useRef, useEffect } from "react";
+import { Link } from "react-router-dom";
 
 // ============================================================
 // DONNÉES : icônes et textes des cartes du panneau gauche
@@ -261,7 +262,7 @@ export default function LoginForm() {
   };
 
   return (
-    <div className="flex min-h-screen items-center justify-center bg-slate-100 p-6">
+    <div className="flex min-h-screen items-center justify-center bg-slate-100 p-6 mt-6">
       <div className="grid w-full max-w-5xl overflow-hidden rounded-2xl border border-gray-200 shadow-xl md:grid-cols-2">
 
         {/* Panneau gauche décoratif */}
@@ -269,12 +270,23 @@ export default function LoginForm() {
 
         {/* Panneau droit : le formulaire */}
         <div className="bg-white px-8 py-9 flex flex-col justify-center">
+            <div className="bg-white">
+                      {/* Tabs */}
+                      <nav className="mb-6 flex gap-5 border-b border-gray-100 pb-3">
+                        <Link to="/register" className="mb-[-13px] border-b-2 border-transparent pb-3 text-sm text-gray-400 hover:text-slate-600">
+                          Inscription
+                        </Link>
+                        <span className="mb-[-13px] border-b-2 border-blue-900 pb-3 text-sm font-semibold text-blue-900">
+                          Connexion
+                        </span>
+                      </nav>
+            </div>
 
           {/* -------- ÉTAPE 1 : Email + Mot de passe -------- */}
           {step === 1 && (
             <div>
               <h1 className="text-xl font-bold text-slate-800">Bon retour </h1>
-              <p className="text-xs text-slate-400 mt-1 mb-5">
+              <p className="text-xs text-slate-400 mt-1 mb-5 md:text-sm">
                 Connectez-vous à votre compte
               </p>
               <StepBar step={1} />
