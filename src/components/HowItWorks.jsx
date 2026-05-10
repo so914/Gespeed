@@ -35,7 +35,7 @@ export default function HowItWorks() {
           Déménager n'a jamais été aussi simple et transparent.
         </p>
 
-        <div className="flex flex-col md:flex-row justify-around gap-6 md:gap-0 px-4 md:px-6 text-lg">
+        <div className="flex flex-col md:flex-row justify-around gap-6 md:gap-0 md:px-6 text-lg">
           {steps.map((step) => (
             <div key={step.number}>
 

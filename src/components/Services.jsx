@@ -48,7 +48,7 @@ export default function Services() {
           <h2 className="text-xl text-center md:text-3xl text-white font-bold mb-4 md:mt-[2rem] my-[2rem] hidden md:block">
             Nos Services
           </h2>
-          <p className="text-gray-300 mb-12 text-center hidden md:block">
+          <p className="text-gray-300 mb-12 text-center hidden md:block ">
             Des solutions simples, rapides et fiables pour tous vos besoins de
             transport et déménagement.
           </p>
@@ -63,7 +63,7 @@ export default function Services() {
                 className="bg-white rounded-md px-3 shadow-md hover:shadow-xl transition py-10"
               >
                 <div className="grid content-center text-center">
-                  <p className="size-12 rounded-full text-white bg-gray-700 flex justify-center items-center mx-auto">
+                  <p className="size-12 rounded-full text-white bg-blue-900 md:bg-gray-700 flex justify-center items-center mx-auto">
                     {service.icon}
                   </p>
                   <h3 className="mt-3 font-bold mb-2 text-md md:text-[17px]">
