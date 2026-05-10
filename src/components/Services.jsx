@@ -56,7 +56,7 @@ export default function Services() {
 
 
         <div className="w-full px-8 flex items-center justify-center gap-8 md:-translate-y-116">
-          <div className="grid grid-cols-1 mx-6 gap-y-8 md:gap-y-0 md:grid-cols-4 gap-6 w-full md:max-w-6xl">
+          <div className="grid grid-cols-1 gap-y-8 md:grid-cols-4 md:gap-6 w-full ">
             {services.map((service, idx) => (
               <div
                 key={idx}
