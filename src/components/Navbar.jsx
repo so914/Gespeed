@@ -125,7 +125,7 @@ export default function Navbar() {
             </li>
 
             <li className="py-3 border-b ">
-              <Link to='/devis'>Demande de devis</Link>
+              <Link to="/devis">Demande de devis</Link>
             </li>
 
             <li className="py-3 border-b">Aide</li>
