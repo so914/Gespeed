@@ -1,24 +1,5 @@
 import { FaShieldAlt, FaHeadset, FaTruck, FaSmile } from "react-icons/fa";
 
-const stats = [
-  {
-    number:80,
-    type:"Déménagements"
-  },
-  {
-    number:25,
-    type:"Transports"
-  },
-  {
-    number:4,
-    type:"Nettoyage d'habitat"
-  },
-  {
-    number:'98%',
-    type:"Satisfaction"
-  }
-];
-
 const features = [
   {
     icon: FaShieldAlt,
@@ -82,7 +63,7 @@ export default function WhyUs() {
           </div>
 
           <div className="w-full md:w-[40%]">
-            <div className="bg-blue-900 rounded-lg pt-6 px-6 text-white h-full">
+            <div className="bg-blue-900 rounded-lg pt-6 pb-3 md:pb-0 px-6 text-white h-full">
               <h2 className="font-light mb-6 text-md md:text-lg leading-8 ">
                 Choisir GeSpeed Delivery pour votre déménagement, c'est s'assurer d'un service de qualité supérieure avec une expertise de plus 2 ans dans le secteur. Nous comprenons que chaque déménagement est unique, c'est pourquoi nous proposons des solutions sur mesure adaptées à vos besoins spécifiques. De la planification minutieuse à l'installation finale, nos équipes professionnelles et dévouées vous accompagnent à chaque étape pour garantir une expérience sans stress et parfaiement orchestréé.
               </h2> 

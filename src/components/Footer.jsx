@@ -1,3 +1,9 @@
+import React from "react"
+import { FaWhatsapp } from "react-icons/fa6";
+import { FaFacebook } from "react-icons/fa6";
+import { AiFillTikTok } from "react-icons/ai";
+import { MdPhoneInTalk } from "react-icons/md";
+
 const footerServices = [
   "Déménagement",
   "Transport des matériaux de constructions",
@@ -22,7 +28,7 @@ export default function Footer() {
           alt="Logo"
           className="md:w-[120px] w-[100px]"
         />
-        <p className="mt-2 text-md">
+        <p className="mt-2 md:text-md text-sm">
           GeSpeed Delivery entreprise.
           <br />
           Créé en 2024.
@@ -75,20 +81,24 @@ export default function Footer() {
       </nav>
 
       {/* Mobile social */}
-      <nav className="flex flex-col gap-2 md:hidden">
+      <nav className="flex flex-col gap-x-4 md:hidden">
         <h6 className="font-bold text-sm md:text-[18px] uppercase tracking-wide mb-1">
           Contacts
         </h6>
         <div className="flex gap-2">
           <a href="#">
-            <i className="fa-brands fa-facebook text-blue-600 text-3xl"></i>
+            <FaWhatsapp className="text-green-400" size={18} />
           </a>
           <a href="#">
-            <i className="fa-brands fa-whatsapp text-green-400 text-3xl"></i>
+            <FaFacebook className="text-blue-900" size={18} />
           </a>
           <a href="#">
-            <i className="fa-solid fa-phone text-black text-2xl"></i>
+            <MdPhoneInTalk className="text-gray-700" size={18} />
           </a>
+	  <a href="#">
+            <AiFillTikTok className="text-black" size={22} />
+          </a>
+
         </div>
       </nav>
 

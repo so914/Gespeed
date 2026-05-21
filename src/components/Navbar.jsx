@@ -7,7 +7,7 @@ export default function Navbar() {
 
   return (
     <header className="relative">
-      <div className="flex items-center justify-between bg-white shadow-sm px-4 md:px-8 h-[66px] fixed w-full z-20 top-0">
+      <div className="flex items-center justify-between bg-white shadow-sm px-4 md:px-8 h-[66px] fixed w-full z-100 top-0">
         <Link to="/" className="flex-shrink-0">
           <img
             src="./logo.png"
