@@ -1,53 +1,52 @@
-import {
-  ResponsiveContainer,
-  AreaChart,
-  Area,
-  XAxis,
-  YAxis,
-  Tooltip,
-  CartesianGrid,
-} from "recharts";
+"use client"
 
-const data = [
-  { day: "Lun", value: 8 },
-  { day: "Mar", value: 12 },
-  { day: "Mer", value: 10 },
-  { day: "Jeu", value: 15 },
-  { day: "Ven", value: 9 },
-  { day: "Sam", value: 18 },
-  { day: "Dim", value: 11 },
-];
+import { Pie, PieChart } from "recharts"
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
+import { ChartContainer, ChartTooltip, ChartTooltipContent, ChartLegend, ChartLegendContent } from "@/components/ui/chart"
+import "./chart-theme.css"
 
-export default function DemandesChart() {
+const chartData = [
+  { service: "Transport",             count: 275, fill: "var(--color-transport)"   },
+  { service: "Déménagement",          count: 200, fill: "var(--color-demenagement)" },
+  { service: "Emballage",             count: 187, fill: "var(--color-emballage)"   },
+  { service: "Nettoyage",             count: 173, fill: "var(--color-nettoyage)"   },
+  { service: "Montage meubles",       count: 90,  fill: "var(--color-montage)"     },
+]
+
+const chartConfig = {
+  count:        { label: "Demandes" },
+  transport:    { label: "Transport",       color: "#1e3a8a" },
+  demenagement: { label: "Déménagement",    color: "var(--chart-2)" },
+  emballage:    { label: "Emballage",       color: "var(--chart-3)" },
+  nettoyage:    { label: "Nettoyage",       color: "var(--chart-4)" },
+  montage:      { label: "Montage meubles", color: "var(--chart-5)" },
+}
+
+export default function DemandeChart() {
   return (
-    <div className="rounded-2xl border border-white/10 bg-white/5 p-5">
-      <h3 className="mb-4 text-sm text-white/80">Demandes de devis</h3>
-
-      <div className="h-72">
-        <ResponsiveContainer width="100%" height="100%">
-          <AreaChart data={data}>
-            <defs>
-              <linearGradient id="fillDemandes" x1="0" y1="0" x2="0" y2="1">
-                <stop offset="5%" stopColor="#ffffff" stopOpacity={0.35} />
-                <stop offset="95%" stopColor="#ffffff" stopOpacity={0.02} />
-              </linearGradient>
-            </defs>
-
-            <CartesianGrid vertical={false} strokeOpacity={0.08} />
-            <XAxis dataKey="day" />
-            <YAxis />
-            <Tooltip />
-
-            <Area
-              type="monotone"
-              dataKey="value"
-              stroke="#ffffff"
-              strokeWidth={2}
-              fill="url(#fillDemandes)"
-            />
-          </AreaChart>
-        </ResponsiveContainer>
-      </div>
+    <div className="gespeed-charts">
+      <Card className="flex flex-col bg-white">
+        <CardHeader className="items-center pb-0">
+          <CardTitle>Services demandés</CardTitle>
+          <CardDescription>Répartition des demandes de service</CardDescription>
+        </CardHeader>
+        <CardContent className="flex-1 pb-0">
+          <ChartContainer config={chartConfig} className="mx-auto aspect-square max-h-[280px]">
+            <PieChart>
+              <ChartTooltip cursor={false} content={<ChartTooltipContent hideLabel />} />
+              <Pie
+                data={chartData}
+                dataKey="count"
+                nameKey="service"
+                innerRadius={60}
+                strokeWidth={2}
+                stroke="#ffffff"
+              />
+              <ChartLegend content={<ChartLegendContent nameKey="service" />} />
+            </PieChart>
+          </ChartContainer>
+        </CardContent>
+      </Card>
     </div>
-  );
+  )
 }

@@ -82,25 +82,10 @@ export default function WhyUs() {
           </div>
 
           <div className="w-full md:w-[40%]">
-            <div className="bg-blue-900 rounded-lg py-6 px-6 text-white h-full">
-              <h2 className="font-light mb-6 text-md lg:text-xl">
-                Plus de 2000 personnes au Congo Brazzaville nous font confiance,
-                nos statistiques le prouvent.
-              </h2>
-
-              <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                {stats.map((stat, idx) => (
-                  <div
-                    key={idx}
-                    className="bg-white/10 rounded-lg p-4"
-                  >
-                      <div className="grid justify-items-center content-center font-medium text-sm border-b border-white/10 pb-2 last:border-none md:h-16">
-                        <h2 class="md:text-3xl text-white">{stat.number}</h2>
-                        <p class="font-medium text-white">{stat.type}</p>
-                      </div>
-                  </div>
-                ))}
-              </div>
+            <div className="bg-blue-900 rounded-lg pt-6 px-6 text-white h-full">
+              <h2 className="font-light mb-6 text-md md:text-lg leading-8 ">
+                Choisir GeSpeed Delivery pour votre déménagement, c'est s'assurer d'un service de qualité supérieure avec une expertise de plus 2 ans dans le secteur. Nous comprenons que chaque déménagement est unique, c'est pourquoi nous proposons des solutions sur mesure adaptées à vos besoins spécifiques. De la planification minutieuse à l'installation finale, nos équipes professionnelles et dévouées vous accompagnent à chaque étape pour garantir une expérience sans stress et parfaiement orchestréé.
+              </h2> 
             </div>
           </div>
         </div>

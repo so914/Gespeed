@@ -1,32 +1,62 @@
 import React from 'react';
 import { NavLink } from 'react-router-dom';
-import { FaGlobe } from "react-icons/fa6";
+import { FiUsers, FiFileText, FiShoppingBag, FiGrid, FiHome, FiLogOut, FiBarChart2 } from 'react-icons/fi';
 
-export default function DashSide(){
-    return(
-        <div className='px-6 md:grid hidden border-r-1 border-[lightgray] min-h-[650px]'>
-            <div className="mt-26 flex justify-between">
-                <h2 className="font-bold text-blue-900">Administration</h2>
-                <FaGlobe className='text-red-700 mt-1'/>
-            </div>
+const navItems = [
+  { icon: <FiGrid size={16} />,        label: 'Dashboard',    to: '/dashboard'              },
+  { icon: <FiUsers size={16} />,       label: 'Utilisateurs', to: '/dashboard/utilisateurs' },
+  { icon: <FiFileText size={16} />,    label: 'Devis',        to: '/dashboard/devis'        },
+  { icon: <FiShoppingBag size={16} />, label: 'Commandes',    to: '/dashboard/commandes'    },
+  { icon: <FiGrid size={16} />,        label: 'Services',     to: '/dashboard/services'     },
+];
+const activeClass  = 'flex items-center gap-3 px-3 py-2.5 rounded-xl text-sm font-semibold bg-blue-900 text-white shadow-md shadow-blue-900/30';
+const defaultClass = 'flex items-center gap-3 px-3 py-2.5 rounded-xl text-sm font-medium text-slate-500 hover:bg-blue-50 hover:text-blue-900 transition-colors duration-150';
 
-            <h3 className='-translate-y-20 text-gray-700 mt-4'>Dashboard</h3>
-            <div className="-translate-y-38">
-                <h3 className='font-bold text-gray-600 uppercase text-sm'>Gestion</h3>
-            <ul className=' text-gray-700 ps-2'>
-                
-                <li  className='my-4' >Gestion des utilisateurs</li>
-                <li className='my-4'>Gestion des devis</li>
-                <li className='my-4'>Gestion des commandes</li>
-                <li className='my-4'>Gestion des services</li>
-            </ul>
-            </div>
-            
+export default function DashSide() {
+  return (
+    <aside
+      className="hidden md:flex flex-col border-r border-gray-100 min-h-screen w-60 px-4 py-6 bg-white mt-22"
+      style={{ boxShadow: '2px 0 16px rgba(30,58,95,0.06)' }}
+    >
+      <div>
+        <div className="flex items-center gap-2.5 px-1 mb-8">
+          <div className="flex h-8 w-8 items-center justify-center rounded-lg bg-blue-900">
+            <FiBarChart2 size={16} className="text-white" />
+          </div>
+          <span className="text-sm font-bold text-slate-800 tracking-wide">Administration</span>
+        </div>
 
-            <div className="bottom-0 absolute text-white bg-blue-900 py-4 px-8 rounded-lg -translate-y-8">
-                <NavLink to="/">Retour à l'accueil</NavLink><br />
-                <NavLink to="/signIn" className="mt-4">Déconnexion</NavLink>
-            </div>
-        </div>   
-    )
+        <p className="mb-2 px-1 text-[10px] font-bold uppercase tracking-widest text-slate-400">
+          Gestion
+        </p>
+
+        <nav className="flex flex-col gap-1">
+          {navItems.map(({ icon, label, to }) => (
+            <NavLink
+              key={label}
+              to={to}
+		end={to === '/dashboard'}
+              className={({ isActive }) => isActive ? activeClass : defaultClass}
+            >
+              <span className="shrink-0">{icon}</span>
+              {label}
+            </NavLink>
+          ))}
+        </nav>
+      </div>
+
+      <div
+        className="flex flex-col mt-32 gap-1 rounded-2xl border border-blue-900/10 bg-gradient-to-br from-blue-900 to-slate-800 p-3"
+        style={{ boxShadow: '0 4px 20px rgba(30,58,95,0.18)' }}
+      >
+        <NavLink to="/" className="flex items-center gap-2.5 rounded-xl px-3 py-2.5 text-sm font-medium text-white/80 hover:bg-white/10 hover:text-white transition-colors">
+          <FiHome size={15} /> Retour à l'accueil
+        </NavLink>
+        <div className="mx-2 h-px bg-white/10" />
+        <NavLink to="/signIn" className="flex items-center gap-2.5 rounded-xl px-3 py-2.5 text-sm font-medium text-white/80 hover:bg-white/10 hover:text-white transition-colors">
+          <FiLogOut size={15} /> Déconnexion
+        </NavLink>
+      </div>
+    </aside>
+  );
 }

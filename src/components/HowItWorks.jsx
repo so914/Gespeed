@@ -39,19 +39,17 @@ export default function HowItWorks() {
           {steps.map((step) => (
             <div key={step.number}>
 
-              <div className="w-full md:size-64 md:[clip-path:polygon(0_25%,100%_35%,100%_86%,0%_100%)]  h-12 bg-gray-200 relative flex md:gap-0 md:justify-center items-center rounded-md md:divide-x-0 px-4 md:ps-0">
+              <div className="w-full md:size-64 md:[clip-path:polygon(0_25%,100%_35%,100%_86%,0%_100%)]  h-12 bg-blue-900 md:bg-gray-200 relative flex md:gap-0 md:justify-center items-center rounded-md md:divide-x-0 px-4 md:ps-0">
                 {/* mobile number badge */}
-                <div className="md:hidden size-8 bg-blue-900 rounded-full flex items-center justify-center text-white font-bold md:text-lg text-sm">
-                  {step.number}
+                <div className="divide-x-2 flex items-center divide-solid">
+		   <div className="md:hidden size-8  rounded-md  flex items-center justify-center text-white font-bold md:text-lg text-sm">
+                      {step.number}
+                   </div>
+                   <h3 className="font-bold text-center md:hidden ms-2 text-white text-sm">
+                     {step.title}
+                    </h3>
                 </div>
-                <div className="flex items-center md:justify-around w-full">
-                  <h3 className="font-bold text-center md:hidden ms-2 text-gray-950/70 text-sm">
-                    {step.title}
-                  </h3>
-                  <p className="hidden md:inline md:text-5xl text-2xl text-blue-900 md:mt-12">
-                    {step.icon}
-                  </p>
-                </div>
+		<p className="hidden md:inline text-blue-900 text-4xl mt-14 ">{step.icon}</p>
               </div>
 
               {/* mobile etape description  */}

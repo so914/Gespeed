@@ -1,51 +1,64 @@
-import React from 'react'
-import ServicesChart from './ServiceChart'
-import DemandesChart from './DemandeChart'
-import StatutChart from './StatutChart'
-import RevenueChart from './RevenueChart'
+import React from "react";
+import DemandeChart from "./DemandeChart";
+import StatutChart from "./StatutChart";
+import RevenueChart from "./RevenueChart";
+import { GoSearch } from "react-icons/go";
+import { FiUsers, FiPackage, FiCheckCircle, FiDollarSign, FiArrowUp, FiTrendingUp, FiCheck } from "react-icons/fi";
+import DashboardRecap from './DashboardRecap'
 
-export default function Dashcomponent(){
-    return (
-        <section className='px-6'>
-            <div className='mt-22'>
-                <div className='flex'>
-                    <h2 className='font-medium text-gray-700  mb-4 text-2xl '>Bienvenue dans la partie gestion de GeSpeed</h2>
-                    <input type="text" className='rounded-lg border-1 border-[lightgray] right-8 absolute h-8' />
-                </div>
-                <p className="text-gray-400 ">Tableau de bord récaputilatif</p>
-            </div>
 
-            <div>
-                <div className="grid grid-cols-4 w-full  mt-8 gap-4 justify-items-around">
-                    <div className='w-25'>
-                        <h3 className='md:text-4xl text-blue-700 font-bold mb-4'>750</h3>
-                        <p>Demandes reçues</p>
-                    </div>
-                    <div>
-                        <h3 className='md:text-4xl  font-bold mb-4'>100</h3>
-                        <p>Devis émis</p>
-                    </div>
-                    <div>
-                        <h3 className='md:text-4xl text-blue-700 font-bold mb-4'>10</h3>
-                        <p>Missions en cours</p>
-                    </div>
-                    <div>
-                        <h3 className='md:text-4xl font-bold mb-4'>950 000 FCFA</h3>
-                        <p>Chiffre d'affaires</p>
-                    </div>
-                </div>
-            </div>
+export default function Dashcomponent() {
+  const stats = [
+  {
+    icon: <FiUsers size={18} />,
+    label: "Utilisateurs",
+    value: "320",
+    badge: { icon: <FiArrowUp size={10} />, text: "+12%", color: "blue" },
+    delay: "0.05s",
+  },
+  {
+    icon: <FiPackage size={18} />,
+    label: "Commandes reçues",
+    value: "40",
+    badge: { icon: <FiArrowUp size={10} />, text: "+5%", color: "blue" },
+    delay: "0.13s",
+  },
+  {
+    icon: <FiCheckCircle size={18} />,
+    label: "Commandes traitées",
+    value: "32",
+    badge: { icon: <FiCheck size={10} />, text: "80% taux", color: "green" },
+    delay: "0.21s",
+  },
+  {
+    icon: <FiDollarSign size={18} />,
+    label: "Chiffre d'affaires",
+    value: "950 000",
+    suffix: "FCFA",
+    badge: { icon: <FiTrendingUp size={10} />, text: "Ce mois", color: "blue" },
+    delay: "0.29s",
+  },
+];
 
-            <div>
-                <div className="grid grid-cols-2 gap-6 mt-8">
-                    <div className="border-1 rounded-lg shadow-xl border-[lightgray]">
-                        <ServicesChart/>
-                    </div>
-                    <div className="border-1 rounded-lg shadow-xl border-[lightgray]">
-                        <StatutChart/>
-                    </div>
-                </div>
-            </div>
-        </section>
-    )
+
+
+
+
+
+  return (
+    <div className="px-6 mt-26">
+          <h2 className="font-thin text-gray-400 text-2xl ">
+            Bienvenue, Ronnie Ray
+          </h2>
+            <DashboardRecap stats={stats}/>
+        <div className="grid grid-cols-1 md:flex gap-4 mb-4 mt-6 w-full">
+          <div className="md:w-120">
+	    <StatutChart />
+	</div>
+	<div className="md:w-full">
+          <DemandeChart />
+        </div>
+        </div>
+    </div>
+  );
 }

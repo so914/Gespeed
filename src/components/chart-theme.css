@@ -1,0 +1,20 @@
+/* ─────────────────────────────────────────────────────────
+   Thème graphiques GeSpeed — bleu nuit / palette hero
+   Importe CE fichier uniquement dans les pages qui affichent
+   les graphiques. Il ne touche PAS aux variables globales.
+───────────────────────────────────────────────────────── */
+
+.gespeed-charts {
+  /* Fond blanc pour les Card */
+  --background: #ffffff;
+  --card:        #ffffff;
+  --border:      #e2e8f0;
+
+  /* Palette graphiques calquée sur la hero :
+     bleu nuit, bleu moyen, bleu clair, indigo, slate */
+  --chart-1: #072755;   /* blue-900 foncé  → barres/area principale */
+  --chart-2:  #0906bb;   /* blue-600        → mobile / 2e série       */
+  --chart-3: #022ff8f8;   /* blue-400 (hero blob) → 3e segment          */
+  --chart-4: #2567f3;   /* blue-300        → 4e segment               */
+  --chart-5: rgba(101, 166, 231, 0.979);   /* slate-300       → "other" / neutre          */
+}
