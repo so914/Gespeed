@@ -1,22 +1,65 @@
-import React from "react"
+
+import React from "react";
+import { Link } from "react-router-dom";
 import { FaWhatsapp } from "react-icons/fa6";
 import { FaFacebook } from "react-icons/fa6";
 import { AiFillTikTok } from "react-icons/ai";
 import { MdPhoneInTalk } from "react-icons/md";
 
-const footerServices = [
-  "Déménagement",
-  "Transport des matériaux de constructions",
-  "Transport des matériaux événementiels",
-  "Transport des débris",
+const navigation = [
+  {
+    label: "Accueil",
+    path: "/",
+  },
+{
+    label: "Demande de devis",
+    path: "/devis",
+  },
+{
+    label: "Profil",
+    path: "/profil",
+  },
+{
+    label: "Dashboard",
+    path: "/dashboard",
+  },
+
 ];
 
-const footerCompany = ["A propos", "Contacts"];
+const footerCompany = [
+  {
+    label: "A propos",
+    path: "/about",
+  },
+{
+    label: "Aide",
+    path: "/help",
+  },
+
+  {
+    label: "Contacts",
+    path: "/contact",
+  },
+{
+    label: "FAQ",
+    path: "/FAQ",
+  },
+
+];
 
 const footerLegal = [
-  "Conditions d'utilisation",
-  "Politique de confidentialité",
-  "Politique de cookie",
+  {
+    label: "Conditions d'utilisation",
+    path: "/conditions-utilisation",
+  },
+  {
+    label: "Politique de confidentialité",
+    path: "/privacy-policy",
+  },
+  {
+    label: "Politique de cookie",
+    path: "/politique-cookie",
+  },
 ];
 
 export default function Footer() {
@@ -35,18 +78,20 @@ export default function Footer() {
         </p>
       </aside>
 
-      {/* Services */}
+      {/* nav*/}
       <nav className="flex flex-col gap-2">
-        <h6 className="font-bold text-sm md:text-[18px] uppercase  tracking-wide mb-1">
-          Services
+        <h6 className="font-bold text-sm md:text-[18px] uppercase tracking-wide mb-1">
+           Navigation
         </h6>
-        {footerServices.map((s) => (
-          <a
-            key={s}
+
+        {navigation.map((s) => (
+          <Link
+            key={s.label}
+	    to={s.path}
             className="hover:underline decoration-blue-700 decoration-2 hover:text-blue-700 cursor-pointer text-sm md:text-[15px]"
           >
-            {s}
-          </a>
+            {s.label}
+          </Link>
         ))}
       </nav>
 
@@ -55,13 +100,15 @@ export default function Footer() {
         <h6 className="font-bold text-sm md:text-[18px] uppercase tracking-wide mb-1">
           Compagnie
         </h6>
+
         {footerCompany.map((s) => (
-          <a
-            key={s}
+          <Link
+            key={s.label}
+            to={s.path}
             className="hover:underline decoration-blue-700 decoration-2 hover:text-blue-700 cursor-pointer text-sm md:text-[15px]"
           >
-            {s}
-          </a>
+            {s.label}
+          </Link>
         ))}
       </nav>
 
@@ -70,13 +117,15 @@ export default function Footer() {
         <h6 className="font-bold text-sm md:text-[18px] uppercase tracking-wide mb-1">
           Legal
         </h6>
+
         {footerLegal.map((s) => (
-          <a
-            key={s}
+          <Link
+            key={s.label}
+            to={s.path}
             className="hover:underline decoration-blue-700 decoration-2 hover:text-blue-700 cursor-pointer text-sm md:text-[15px]"
           >
-            {s}
-          </a>
+            {s.label}
+          </Link>
         ))}
       </nav>
 
@@ -85,36 +134,49 @@ export default function Footer() {
         <h6 className="font-bold text-sm md:text-[18px] uppercase tracking-wide mb-1">
           Contacts
         </h6>
+
         <div className="flex gap-2">
           <a href="#">
             <FaWhatsapp className="text-green-400" size={18} />
           </a>
+
           <a href="#">
             <FaFacebook className="text-blue-900" size={18} />
           </a>
+
           <a href="#">
             <MdPhoneInTalk className="text-gray-700" size={18} />
           </a>
-	  <a href="#">
+
+          <a href="#">
             <AiFillTikTok className="text-black" size={22} />
           </a>
-
         </div>
       </nav>
 
       {/* Bottom bar */}
       <div className="flex flex-col sm:flex-row justify-between items-start sm:items-center w-full gap-4 mt-4 pt-4 border-t border-gray-200">
-        <p className="text-sm">© 2026 GeSpeed Delivery. Tous droits réservés.</p>
+        <p className="text-sm">
+          © 2026 GeSpeed Delivery. Tous droits réservés.
+        </p>
+
         <div className="hidden md:flex gap-4 text-xl md:text-2xl">
           <a href="#">
-            <i className="fa-brands fa-facebook text-blue-600"></i>
+            <FaWhatsapp className="text-green-400" size={18} />
           </a>
+
           <a href="#">
-            <i className="fa-brands fa-whatsapp text-green-400"></i>
+            <FaFacebook className="text-blue-900" size={18} />
           </a>
+
           <a href="#">
-            <i className="fa-solid fa-phone text-black"></i>
+            <MdPhoneInTalk className="text-gray-700" size={18} />
           </a>
+
+          <a href="#">
+            <AiFillTikTok className="text-black" size={22} />
+          </a>
+
         </div>
       </div>
     </footer>

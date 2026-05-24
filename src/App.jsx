@@ -5,6 +5,9 @@ import Register from './pages/Register'
 import Login from './pages/Login'
 import Devis from './pages/Devis'
 import Dashboard from './pages/Dashboard'
+import PolitiqueConf from "./pages/PolitiqueConf"
+import Terms from "./pages/Terms"
+
 function App() {
 
   return (
@@ -16,6 +19,8 @@ function App() {
         <Route path="/signIn" element={<Login />} />
         <Route path='/devis' element={<Devis/>} />
         <Route path="/dashboard/*" element={<Dashboard />} />
+	<Route path="/privacy-policy" element={<PolitiqueConf />} />
+	<Route path="/conditions-utilisation" element={<Terms />} />
       </Routes>
      </BrowserRouter>
     </>

@@ -59,6 +59,17 @@ export default function Dashcomponent() {
           <DemandeChart />
         </div>
         </div>
+
+	<h3 className="text-gray-500 mt-6 mb-4" >Dernières activités </h3>
+	<table>
+		<thead>
+			<th>Date</th>
+			<th>Activité</th>
+			<th>Service </th>
+			<th>Statut </th>
+
+		</thead>
+	</table>
     </div>
   );
 }

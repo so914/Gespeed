@@ -6,6 +6,8 @@ import EstimateForm from "../components/EstimateForm";
 import Footer from "../components/Footer";
 import Navbar from "../components/Navbar";
 import CarSection from "../components/CarSection";
+import Apropos from "../components/Apropos";
+
 
 export default function Home() {
   return (
@@ -17,6 +19,7 @@ export default function Home() {
         <Services />
         <CarSection />
         <HowItWorks />
+	<Apropos />
         <EstimateForm />
     </main>
     <Footer/>

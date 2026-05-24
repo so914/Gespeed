@@ -1,6 +1,4 @@
 import React from 'react';
-import { FaGlobe } from "react-icons/fa6";
-
 export default function DashHeader(){
     return(
         <header>
@@ -8,10 +6,8 @@ export default function DashHeader(){
                 <div className="flex">
                     <img src="./logo.png" alt="logo" className="w-[100px] md:w-[130px]"/>
                 </div>
-                <div className="flex gap-8">
-                    <FaGlobe className='text-red-700 mt-6'/>
-                        <img src="./avatar.avif" alt="admin photo " className="w-[100px] md:size-14 my-auto  rounded-full"/>                    
-            </div>
+                        <img src="./avatar.avif" alt="admin photo " className="w-[56px] md:size-14 my-auto  rounded-full"/>                    
+
             </div>
         </header>  
     )
